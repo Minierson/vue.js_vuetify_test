@@ -1,94 +1,38 @@
 <template>
   <v-app light>
-    <v-navigation-drawer
-      persistent
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      v-model="drawer"
-      enable-resize-watcher
-    >
-      <v-list>
-        <v-list-tile
-          value="true"
-          v-for="(item, i) in items"
-          :key="i"
-        >
+    <v-navigation-drawer permanent light>
+      <v-toolbar flat class="transparent deep-orange darken-2">
+        <v-list class="pa-0">
+          <v-list-tile avatar tag="ul">
+            <v-list-tile-action>
+              <v-icon left>sentiment_very_satisfied</v-icon>
+            </v-list-tile-action>
+            <v-list-title-content>
+              User email
+            </v-list-title-content>
+          </v-list-tile>
+        </v-list>
+      </v-toolbar>
+      <v-divider></v-divider>
+      <v-list dense class="pt-0">
+        <v-list-tile v-for="item in menuItems" :key="item.title">
           <v-list-tile-action>
-            <v-icon light v-html="item.icon"></v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed>
-      <v-toolbar-side-icon @click.native.stop="drawer = !drawer" light></v-toolbar-side-icon>
-      <v-btn
-        icon
-        light
-        @click.native.stop="miniVariant = !miniVariant"
-      >
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        light
-        @click.native.stop="clipped = !clipped"
-      >
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        light
-        @click.native.stop="fixed = !fixed"
-      >
-        <v-icon>remove</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        icon
-        light
-        @click.native.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn>
+    <v-toolbar class="cyan" dark>
+      <v-toolbar-title>Toolbar</v-toolbar-title>
     </v-toolbar>
     <main>
-      <v-container fluid>
-        <v-slide-y-transition mode="out-in">
-          <v-layout column align-center>
-            <img src="/static/v.png" alt="Vuetify.js" class="mb-5">
-            <blockquote>
-              &#8220;First, solve the problem. Then, write the code.&#8221;
-              <footer>
-                <small>
-                  <em>&mdash;John Johnson</em>
-                </small>
-              </footer>
-            </blockquote>
-          </v-layout>
-        </v-slide-y-transition>
-      </v-container>
+      <router-view></router-view>
+  
     </main>
-    <v-navigation-drawer
-      temporary
-      :right="right"
-      v-model="rightDrawer"
-    >
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :fixed="fixed">
-      <span>&copy; 2017</span>
-    </v-footer>
+  
   </v-app>
 </template>
 
@@ -96,16 +40,20 @@
   export default {
     data () {
       return {
-        clipped: false,
-        drawer: true,
-        fixed: false,
-        items: [
-          { icon: 'bubble_chart', title: 'Inspire' }
-        ],
-        miniVariant: false,
-        right: true,
-        rightDrawer: false,
-        title: 'Vuetify.js'
+        drawer: null,
+        menuItems: [
+          {icon: 'supervisor_account', title: 'Users'},
+          {icon: 'domain', title: 'Offices'},
+          {icon: 'equalizer', title: 'Levels'},
+          {icon: 'location_on', title: 'POIs'},
+          {icon: 'gps_fixed', title: 'Beacons'},
+          {icon: 'mail', title: 'Requests'},
+          {icon: 'content_paste', title: 'Request topics'},
+          {icon: 'child_care', title: 'Domains'},
+          {icon: 'phonelink', title: 'Devices'},
+          {icon: 'notifications', title: 'Notification group'}
+
+        ]
       }
     }
   }
