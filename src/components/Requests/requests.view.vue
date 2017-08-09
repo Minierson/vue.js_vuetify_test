@@ -1,16 +1,15 @@
 <template>
     <div>
-        <p>Users form page</p>
+        <p>Request page</p>
     </div>
 </template>
 
-<script>
+<<script>
 export default {
-    
+  
 }
 </script>
 
 <style>
 
 </style>
-
