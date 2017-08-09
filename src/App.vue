@@ -26,7 +26,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar class="cyan" dark>
-      <v-toolbar-title>Toolbar</v-toolbar-title>
+      <v-toolbar-title>Office App</v-toolbar-title>
     </v-toolbar>
     <main>
       <router-view></router-view>
