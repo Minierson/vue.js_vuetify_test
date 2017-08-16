@@ -1,16 +1,14 @@
 <template>
     <div>
-        <p>Users form page</p>
+        <p>Beacons page</p>
     </div>
 </template>
 
 <script>
 export default {
-    
 }
 </script>
 
 <style>
 
 </style>
-

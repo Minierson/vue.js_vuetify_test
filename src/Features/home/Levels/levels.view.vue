@@ -1,12 +1,11 @@
 <template>
     <div>
-        <p>Beacons page</p>
+        <p>Levels page</p>
     </div>
 </template>
 
-<<script>
+<script>
 export default {
-  
 }
 </script>
 

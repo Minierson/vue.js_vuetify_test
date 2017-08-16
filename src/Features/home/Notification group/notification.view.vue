@@ -1,12 +1,11 @@
 <template>
     <div>
-        <p>Levels page</p>
+        <p>notification page page</p>
     </div>
 </template>
 
-<<script>
+<script>
 export default {
-  
 }
 </script>
 

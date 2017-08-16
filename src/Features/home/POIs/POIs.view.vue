@@ -1,12 +1,11 @@
 <template>
     <div>
-        <p>Request page</p>
+        <p>POI page</p>
     </div>
 </template>
 
-<<script>
+<script>
 export default {
-  
 }
 </script>
 

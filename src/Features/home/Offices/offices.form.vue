@@ -1,12 +1,11 @@
 <template>
     <div>
-        <p>Users form page</p>
+        <p>Offices form page</p>
     </div>
 </template>
 
-<<script>
+<script>
 export default {
-  
 }
 </script>
 

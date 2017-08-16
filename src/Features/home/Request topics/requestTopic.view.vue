@@ -1,12 +1,11 @@
 <template>
     <div>
-        <p>Domains page</p>
+        <p>Request topic page</p>
     </div>
 </template>
 
-<<script>
+<script>
 export default {
-  
 }
 </script>
 

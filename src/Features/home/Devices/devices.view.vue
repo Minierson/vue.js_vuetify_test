@@ -1,12 +1,11 @@
 <template>
     <div>
-        <p>Request topic page</p>
+        <p>Users form page</p>
     </div>
 </template>
 
-<<script>
+<script>
 export default {
-  
 }
 </script>
 

@@ -1,12 +1,11 @@
 <template>
     <div>
-        <p>notification page page</p>
+        <p>Request page</p>
     </div>
 </template>
 
-<<script>
+<script>
 export default {
-  
 }
 </script>
 
