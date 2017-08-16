@@ -15,7 +15,7 @@
       </v-toolbar>
       <v-divider></v-divider>
       <v-list dense class="pt-0">
-        <v-list-tile v-for="item in menuItems" :key="item.title" router :to="item.link">
+        <v-list-tile v-for="item in menuItems" :key="item.title" :to="item.link">
           <v-list-tile-action>
             <v-icon dark>{{ item.icon }}</v-icon>
           </v-list-tile-action>
