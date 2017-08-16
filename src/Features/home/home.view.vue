@@ -15,7 +15,7 @@
       </v-toolbar>
       <v-divider></v-divider>
       <v-list dense class="pt-0">
-        <v-list-tile v-for="item in menuItems" :key="item.title">
+        <v-list-tile v-for="item in menuItems" :key="item.title" router :to="item.link">
           <v-list-tile-action>
             <v-icon dark>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -38,21 +38,21 @@
 
 <script>
   export default {
+    name: 'home',
     data () {
       return {
         drawer: null,
         menuItems: [
-          {icon: 'supervisor_account', title: 'Users'},
-          {icon: 'domain', title: 'Offices'},
-          {icon: 'equalizer', title: 'Levels'},
-          {icon: 'location_on', title: 'POIs'},
-          {icon: 'gps_fixed', title: 'Beacons'},
-          {icon: 'mail', title: 'Requests'},
-          {icon: 'content_paste', title: 'Request topics'},
-          {icon: 'child_care', title: 'Domains'},
-          {icon: 'phonelink', title: 'Devices'},
-          {icon: 'notifications', title: 'Notification group'}
-
+          {icon: 'supervisor_account', title: 'Users', link: '/home/users'},
+          {icon: 'domain', title: 'Offices', link: '/home/offices'},
+          {icon: 'equalizer', title: 'Levels', link: '/home/levels'},
+          {icon: 'location_on', title: 'POIs', link: '/home/POIs'},
+          {icon: 'gps_fixed', title: 'Beacons', link: '/home/beacons'},
+          {icon: 'mail', title: 'Requests', link: '/home/requests'},
+          {icon: 'content_paste', title: 'Request topics', link: '/home/requestTopics'},
+          {icon: 'child_care', title: 'Domains', link: '/home/domains'},
+          {icon: 'phonelink', title: 'Devices', link: '/home/devices'},
+          {icon: 'notifications', title: 'Notification group', link: '/home/notifications'}
         ]
       }
     }
